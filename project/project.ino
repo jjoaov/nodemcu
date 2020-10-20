@@ -23,10 +23,14 @@ DHT dht(DHT_PIN, DHT_TYPE);
 const char *ssid = "";//Identificador de rede   <-- MODIFICAR DE ACORDO COM A REDE
 const char *passwd = "";//Senha                 <-- ʕ•ᴥ•ʔ
 
+String channel_id = "892363";
+String write_api_key = "I9J4ZEW27Z943VHU";
+
+
 // Informações básicas do servidor...
-const char *host =  "megatecnologia.com.br"; //URL servidor
-const char *route = "/controle/silas.json";
-const char *query = "?chave=523DA-0D1DD-A84D9-EF34B-F1B31-99AC9-28"; //Chave da aplicação |parâmetro chave|
+String host =  "api.thingspeak.com"; //URL servidor
+String route = "/channels/" + channel_id + "/bulk_update.json";
+String query = ""; //Chave da aplicação |parâmetro chave|
 
 //Parâmetros de Configuração |SETUP| disponíveis via página de configuração do servidor
 extern float interval;

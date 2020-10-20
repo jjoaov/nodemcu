@@ -43,7 +43,7 @@ void requestServer()
   String requestPkg = createRequest();
   Serial.println("[OK]");
 
-  Serial.printf("\nConectando-se a %s... ", host);
+  Serial.printf("\nConectando-se ao servidor");
   if ( client.connect(host, 80) ) {
     Serial.println("[OK]");
     Serial.print("Enviando Requisição... ");
